@@ -11,6 +11,6 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v4
-      - uses: labwired/firmware-test@v1
+      - uses: w1ne/labwired-core@v1
         with:
           script: tests/firmware-regression.yaml
