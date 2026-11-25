@@ -10,7 +10,9 @@ greeting over UART and then loops. `firmware/target/firmware` is that program al
 built, so CI does not need a cross-compiler to run the test. `tests/firmware-regression.yaml`
 runs the firmware in LabWired's simulator for 20000 steps and checks that the UART
 output contains the greeting. `.github/workflows/labwired.yml` runs that test on every
-push and pull request using the `labwired/firmware-test` action.
+push and pull request using the `w1ne/labwired-core@v1` GitHub Action (which also
+auto-detects unmodified Wokwi `diagram.json` and KiCad `.kicad_pcb` / `.kicad_sch`
+circuits alongside firmware tests).
 
 ## Using this for your own firmware
 
